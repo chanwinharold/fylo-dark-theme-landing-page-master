@@ -2,6 +2,8 @@ import "../styles/Main.css"
 
 import introUrl from "../assets/images/illustration-intro.png"
 import productiveUrl from "../assets/images/illustration-stay-productive.png"
+// import curveMobile from "../assets/images/bg-curvy-mobile.svg"
+// import curveDesktop from "../assets/images/bg-curvy-desktop.svg"
 
 import Argument from "./Argument.jsx";
 import Testimony from "./Testimony.jsx";
@@ -16,6 +18,7 @@ function Main() {
     return (
         <main>
             <div className="container">
+
                 <div className="main-intro">
                     <img src={introUrl} alt=""/>
                     <h1>All your files in one secure location, accessible anywhere.</h1>
@@ -23,6 +26,11 @@ function Main() {
                         you need, share and collaborate with friends family, and co-workers.</p>
                     <Button>Get Started</Button>
                 </div>
+
+                {/*<picture>*/}
+                {/*    <source srcSet={curveDesktop} media="(min-width: 375px)" />*/}
+                {/*    <img className="bg-curve" src={curveMobile} alt="" />*/}
+                {/*</picture>*/}
 
                 <section className="main-arguments">
                     {

@@ -1,5 +1,17 @@
 main {
     z-index: 5;
+
+    /*.container {*/
+    /*    position: relative;*/
+
+    /*    .bg-curve {*/
+    /*        position: absolute;*/
+    /*        top: 500px;*/
+    /*        left: 0; right: 0;*/
+    /*        z-index: -1;*/
+    /*        object-fit: cover;*/
+    /*    }*/
+    /*}*/
 }
 
 .main-intro {
@@ -47,7 +59,7 @@ main {
     }
 }
 .main-productive img {
-    flex: 4;
+    flex: 3;
 }
 .main-productive .wrapper {
     flex: 2;
@@ -62,12 +74,12 @@ main {
 .main-productive a {
     text-decoration: none;
     color: var(--color-accent-secondary);
-    transition: color 500ms ease-out;
+    transition: color 250ms ease-out;
     span:has(&) {
         width: fit-content;
         display: inline-flex; gap: 0.5rem; align-items: center;
         border-bottom: 1px solid var(--color-accent-secondary);
-        transition: border-bottom-color 500ms ease-out;
+        transition: border-bottom-color 250ms ease-out;
     }
 }
 .main-productive a:hover {

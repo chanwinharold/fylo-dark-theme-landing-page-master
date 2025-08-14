@@ -3,7 +3,7 @@
     width: min(100%, 350px);
     border-radius: 0.5rem;
     padding: 1.5rem;
-    background-color: var(--color-primary-800);
+    background-color: var(--color-primary-850);
 
     display: inline-grid;
     gap: 2rem;
