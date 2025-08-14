@@ -1,0 +1,11 @@
+.btn-main {
+    color: var(--color-neutral-100);
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+    min-width: 200px; height: 40px; display: inline-grid; place-items: center;
+    background: var(--color-accent-main);
+    background: linear-gradient(5deg, var(--color-accent-main) 5%, var(--color-accent-secondary) 100%);
+    transition: opacity 250ms ease-out;
+}
+.btn-main:hover {opacity: 0.5}

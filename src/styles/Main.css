@@ -1,0 +1,102 @@
+main {
+    z-index: 5;
+}
+
+.main-intro {
+    max-width: 600px;
+    margin-inline: auto;
+    margin-block: 5rem;
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+.main-intro h1 {
+    font-size: 2.5em;
+    line-height: 1.8ch;
+}
+.main-intro .btn-main {
+    width: fit-content;
+}
+
+.main-arguments {
+    max-width: 850px;
+    margin-inline: auto;
+    margin-block: 5rem;
+    display: grid; gap: 3rem;
+    place-items: center;
+    grid-template-columns: 1fr;
+    @media screen and (min-width: 550px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+.main-productive {
+    max-width: 100%;
+    margin-inline: auto;
+    margin-block: 5rem;
+    display: flex; gap: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: 850px) {
+        flex-direction: row;
+        & img, & .wrapper { width: min(50%, 600px); }
+    }
+}
+.main-productive img {
+    flex: 4;
+}
+.main-productive .wrapper {
+    flex: 2;
+    display: inline-grid;
+    gap: 1rem;
+}
+.main-productive h2 {
+    font-size: 1.25em; @media screen and (min-width: 550px) { font-size: 1.5em; }
+    font-weight: var(--fw-bold);
+    line-height: 1.8ch;
+}
+.main-productive a {
+    text-decoration: none;
+    color: var(--color-accent-secondary);
+    transition: color 500ms ease-out;
+    span:has(&) {
+        width: fit-content;
+        display: inline-flex; gap: 0.5rem; align-items: center;
+        border-bottom: 1px solid var(--color-accent-secondary);
+        transition: border-bottom-color 500ms ease-out;
+    }
+}
+.main-productive a:hover {
+    color: var(--color-neutral-100);
+    & + svg circle {
+        fill: var(--color-neutral-100);
+    }
+    span:has(&) {
+        border-bottom-color: transparent;
+    }
+}
+
+.main-testimony {
+    max-width: 100%;
+    margin-inline: auto;
+    margin-block: 5rem;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.main-testimony article:first-child {
+    position: relative;
+    &::before {
+        content: "";
+        width: 60px; height: 60px;
+        position: absolute;
+        top: -30px; left: -10px;
+        background: url(/src/assets/images/bg-quotes.png) no-repeat;
+    }
+}

@@ -1,0 +1,23 @@
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    width: 176px;
+    height: 52px;
+    @media screen and (max-width: 650px) {
+        width: calc(176px * 0.5);
+        height: calc(52px * 0.5);
+    }
+}
+header nav {
+    display: inline-flex;
+    gap: 2rem; @media screen and (max-width: 320px) {gap: 1rem;}
+}
+header a {
+    text-decoration: none;
+    color: var(--color-neutral-100);
+    &:hover { text-decoration: 2px underline var(--color-neutral-100); font-weight: var(--fw-bold); }
+}
