@@ -1,17 +1,5 @@
 main {
     z-index: 5;
-
-    /*.container {*/
-    /*    position: relative;*/
-
-    /*    .bg-curve {*/
-    /*        position: absolute;*/
-    /*        top: 500px;*/
-    /*        left: 0; right: 0;*/
-    /*        z-index: -1;*/
-    /*        object-fit: cover;*/
-    /*    }*/
-    /*}*/
 }
 
 .main-intro {
@@ -32,26 +20,42 @@ main {
 }
 
 .main-arguments {
-    max-width: 850px;
+    width: 100%;
     margin-inline: auto;
-    margin-block: 5rem;
+    padding-block: 5rem;
     display: grid; gap: 3rem;
     place-items: center;
+    place-content: center;
     grid-template-columns: 1fr;
     @media screen and (min-width: 550px) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
 }
+.main-arguments {
+    position: relative;
+    border-top: 2px solid var(--color-primary-900);
+    background-color: var(--color-primary-900);
+
+    .bg-curve {
+        position: absolute;
+        bottom: 100%;
+        left: 0; right: 0;
+        z-index: -1;
+        object-fit: cover;
+    }
+}
 
 .main-productive {
     max-width: 100%;
     margin-inline: auto;
-    margin-block: 5rem;
+    padding-block: 5rem;
     display: flex; gap: 2rem;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border-top: 2px solid var(--color-primary-900);
+    background-color: var(--color-primary-900);
 
     @media screen and (min-width: 850px) {
         flex-direction: row;
@@ -76,7 +80,7 @@ main {
     color: var(--color-accent-secondary);
     transition: color 250ms ease-out;
     span:has(&) {
-        width: fit-content;
+        width: max-content;
         display: inline-flex; gap: 0.5rem; align-items: center;
         border-bottom: 1px solid var(--color-accent-secondary);
         transition: border-bottom-color 250ms ease-out;
@@ -95,12 +99,14 @@ main {
 .main-testimony {
     max-width: 100%;
     margin-inline: auto;
-    margin-block: 5rem;
+    padding-block: 5rem;
     display: inline-flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    border-top: 2px solid var(--color-primary-900);
+    background: linear-gradient(180deg, var(--color-primary-900) 50%, var(--color-primary-800) 100%);
 }
 .main-testimony article:first-child {
     position: relative;

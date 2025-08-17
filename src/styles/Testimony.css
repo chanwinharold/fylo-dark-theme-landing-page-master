@@ -4,6 +4,7 @@
     border-radius: 0.5rem;
     padding: 1.5rem;
     background-color: var(--color-primary-850);
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 
     display: inline-grid;
     gap: 2rem;

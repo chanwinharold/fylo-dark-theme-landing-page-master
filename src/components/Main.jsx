@@ -2,8 +2,8 @@ import "../styles/Main.css"
 
 import introUrl from "../assets/images/illustration-intro.png"
 import productiveUrl from "../assets/images/illustration-stay-productive.png"
-// import curveMobile from "../assets/images/bg-curvy-mobile.svg"
-// import curveDesktop from "../assets/images/bg-curvy-desktop.svg"
+import curveMobile from "../assets/images/bg-curvy-mobile.svg"
+import curveDesktop from "../assets/images/bg-curvy-desktop.svg"
 
 import Argument from "./Argument.jsx";
 import Testimony from "./Testimony.jsx";
@@ -27,17 +27,17 @@ function Main() {
                     <Button>Get Started</Button>
                 </div>
 
-                {/*<picture>*/}
-                {/*    <source srcSet={curveDesktop} media="(min-width: 375px)" />*/}
-                {/*    <img className="bg-curve" src={curveMobile} alt="" />*/}
-                {/*</picture>*/}
-
                 <section className="main-arguments">
                     {
                         Arguments.map(({url, title, content}) => (
                             <Argument key={title} imgUrl={url} title={title} paragraph={content} />
                         ))
                     }
+
+                    <picture>
+                        <source srcSet={curveDesktop} media="(min-width: 375px)" />
+                        <img className="bg-curve" src={curveMobile} alt="" />
+                    </picture>
                 </section>
 
                 <section className="main-productive">

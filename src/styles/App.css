@@ -31,6 +31,13 @@ body {
 .container {
     width: min(100%, 1440px);
     margin-inline: auto;
+}
+
+header,
+footer,
+.main-intro,
+.main-productive,
+.main-testimony {
     padding-inline: 1rem;
     @media screen and (min-width: 650px) {
         padding-inline: 2rem;
